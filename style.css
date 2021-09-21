@@ -1,10 +1,31 @@
+:root{
+    /* cor */
+    --text-color: #636e72;
+    --body-color: #ecf0f3;
+    --body-color-alt: #fdcb6e;
+    --button-limpar: #ff7675;
+    --first-shadow:#ffffff;
+    --first-shadow-alt: rgba(0,0,0,.16);
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ecf0f3;
+    background-color: var(--body-color);
     font-family: sans-serif;
     outline: none;
+}
+
+
+/* thema dark/ligth VARIAVEIS */
+body.dark-theme{
+    --text-color: #dfe6e9;
+    --body-color: #2d3436;
+    --first-shadow:#000000;
+    --first-shadow-alt: rgba(255, 255, 255, 0.16);
 }
 
 .container{
@@ -15,11 +36,11 @@
 }
 
 .calculadora{
-    background-color: #ecf0f3;
+    background-color: var(--body-color);
     padding: 15px;
     border-radius: 30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
-                        5px 5px 12px rgba(0,0,0,.16);
+    box-shadow: inset 5px 5px 12px var(--first-shadow),
+                        5px 5px 12px var(--first-shadow-alt);
     display: grid;
     grid-template-columns: repeat(4,68px);
 }
@@ -28,12 +49,12 @@ input{
     grid-column: span 4;
     height: 70px;
     width: 260px;
-    background-color: #ecf0f3;
-    box-shadow: inset -5px -5px 12px #ffffff,
-                inset 5px 5px 12px rgba(0,0,0,.16);
+    background-color: var(--body-color);
+    box-shadow: inset -5px -5px 12px var(--first-shadow),
+                inset 5px 5px 12px var(--first-shadow-alt);
     border: none;
     border-radius: 30px;
-    color: rgb(70,70, 70);
+    color: var(--text-color);
     font-size: 50px;
     text-align: end;
     margin: auto;
@@ -45,11 +66,42 @@ input{
 button{
     height: 48px;
     width: 48px;
-    background-color: #ecf0f3;
-    box-shadow: -5px -5px 12px #ffffff,
+    background-color: var(--body-color);
+    box-shadow: -5px -5px 12px var(--first-shadow),
                     5px 5px 12px rgba(0,0,0,.16);
     border: none;
+    color: var(--text-color);
     border-radius: 50%;
     margin: 8px;
     font-size: 16px;
+    cursor: pointer;
+}
+
+#theme-button{
+    padding: 8px;
+}
+
+.button-special{
+    background-color: var(--body-color-alt);
+    color: var(--body-color);
+    font-weight: bolder;
+}
+
+.limpar{
+    background-color: var(--button-limpar);
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.delete{
+    background-color: var(--text-color);
+    color: var(--body-color);
+    font-weight: bolder;
+}
+
+footer{
+    text-align: center;
+    font-size: small;
+    color: var(--text-color);
+    margin-bottom: 4px;
 }

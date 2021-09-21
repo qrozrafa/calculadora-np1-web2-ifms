@@ -16,34 +16,41 @@
     
     <div class="container">
         <div class="calculadora">
-            <input type="text" placeholder="0">
-            <button onclick="Clear()">AC</button>
-            <button onclick="del()">DEL</button>
-            <button onclick="display('%')">%</button>
-            <button onclick="display('/')">/</button>
+            <input type="text" placeholder="0" id="tela-saida">
+            <button onclick="limpar()" class="limpar">AC</button>
+            <button onclick="excluir()" class="delete">DEL</button>
+            <button onclick="display('%')" class="button-special">%</button>
+            <button onclick="display('/')" class="button-special">/</button>
 
             <button onclick="display('7')">7</button>
             <button onclick="display('8')">8</button>
             <button onclick="display('9')">9</button>
-            <button onclick="display('*')">*</button>
+            <button onclick="display('*')" class="button-special">x</button>
 
             <button onclick="display('4')">4</button>
             <button onclick="display('5')">5</button>
             <button onclick="display('6')">6</button>
-            <button onclick="display('-')">-</button>
+            <button onclick="display('-')" class="button-special">-</button>
 
             <button onclick="display('1')">1</button>
             <button onclick="display('2')">2</button>
             <button onclick="display('3')">3</button>
-            <button onclick="display('+')">+</button>
+            <button onclick="display('+')" class="button-special">+</button>
 
             <button onclick="display('0')">0</button>
             <button onclick="display('.')">.</button>
-            <button onclick="calcular()" class="igual">=</button>
-            
             <button onclick=" " class="icon"><i class='bx bx-moon change-theme' id="theme-button"></i></button>
+           
+            <button onclick="calcular()" class="button-special">=</button>
+            
         </div>
     </div>
+
+    <footer>
+        <p class="footer__copy">&#169; Rafael de Queiroz - Web2 - IFMS.2021 </p>
+    </footer>
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- SCRIPT -->
     <script src="script.js"></script>
 </body>
