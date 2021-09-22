@@ -1,9 +1,10 @@
 let teladeSaida = document.getElementById("tela-saida");
 
+// FUNCAO TELA/VALOR
 function display(num){
     teladeSaida.value += num;
 }
-
+// FUNCAO CALCULADORA
 function calcular(){
     try{
         teladeSaida.value = eval(teladeSaida.value);

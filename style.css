@@ -94,9 +94,10 @@ button{
 }
 
 .delete{
-    background-color: var(--text-color);
-    color: var(--body-color);
+    /* background-color: var(--text-color); */
+    color: var(--text-color);
     font-weight: bolder;
+    font-size: 20px;
 }
 
 footer{
