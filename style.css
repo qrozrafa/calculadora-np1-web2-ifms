@@ -3,11 +3,13 @@
     --text-color: #636e72;
     --body-color: #ecf0f3;
     --body-color-alt: #fdcb6e;
+    --body-color-alt-active: #b49150;
     --button-limpar: #ff7675;
+    --button-limpar-active: #cc5f5f;
+    --button-active:#ced0d1;
     --first-shadow:#ffffff;
     --first-shadow-alt: rgba(0,0,0,.16);
 }
-
 
 
 *{
@@ -24,6 +26,7 @@
 body.dark-theme{
     --text-color: #dfe6e9;
     --body-color: #2d3436;
+    --button-active:#6b6b6b;
     --first-shadow:#000000;
     --first-shadow-alt: rgba(255, 255, 255, 0.16);
 }
@@ -77,7 +80,15 @@ button{
     cursor: pointer;
 }
 
+.button:active{
+    background-color: var(--button-active);
+}
+
 #theme-button{
+    justify-self: center;
+    align-self: center;
+    color: var(--text-color);
+
     padding: 8px;
 }
 
@@ -86,11 +97,18 @@ button{
     color: var(--body-color);
     font-weight: bolder;
 }
+.button-special:active{
+    background-color: var(--body-color-alt-active);
+}
 
 .limpar{
     background-color: var(--button-limpar);
     color: #ffffff;
     font-weight: bolder;
+}
+
+.limpar:active{
+    background-color: var(--button-limpar-active);
 }
 
 .delete{
@@ -106,3 +124,4 @@ footer{
     color: var(--text-color);
     margin-bottom: 4px;
 }
+

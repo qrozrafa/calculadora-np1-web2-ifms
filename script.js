@@ -1,13 +1,17 @@
+/* ======= FUNCAO CALCULADORA =======*/
+
 let teladeSaida = document.getElementById("tela-saida");
 
 // FUNCAO TELA/VALOR
 function display(num){
     teladeSaida.value += num;
 }
-// FUNCAO CALCULADORA
+
+// CALCULAR
 function calcular(){
     try{
         teladeSaida.value = eval(teladeSaida.value);
+        
     }
     catch(err){
         alert("Operação invalida")
@@ -22,6 +26,8 @@ function limpar(){
 function excluir(){
     teladeSaida.value = teladeSaida.value.slice(0, -1);
 }
+
+
 
 /* ======= DARK LIGHT TEMA =======*/
 const themeButton = document.getElementById('theme-button') 
@@ -55,7 +61,7 @@ themeButton.addEventListener('click', ()=>{
 })
 
 
-// SCROLL REVEAL ANIMATION
+/* =======  SCROLL REVEAL ANIMATION =======*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '30px',
