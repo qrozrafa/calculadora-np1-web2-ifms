@@ -10,8 +10,8 @@ function display(num){
 // CALCULAR
 function calcular(){
     try{
-        teladeSaida.value = eval(teladeSaida.value);
-        
+        teladeSaida.value = eval(teladeSaida.value).toFixed(2);
+               
     }
     catch(err){
         alert("Operação invalida")
